@@ -5,7 +5,7 @@ class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<ProfileScreen> createState() => _LoginScreenState();
+  State<ProfileScreen> createState() => _ProfileEdition();
 }
 
 // Icon Profile
@@ -172,7 +172,7 @@ Widget buildSalvar(BuildContext context) {
   );
 }
 
-class _LoginScreenState extends State<ProfileScreen> {
+class _ProfileEdition extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
