@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/registration_screen.dart';
+import 'package:login_page/tela_cadastro_paciente.dart';
 import 'login_screen.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoginScreen(),
         '/registration': (context) => const RegistrationScreen(),
+        '/cadastroPaciente': (context) => const CadastroPaciente(),
       },
     );
   }

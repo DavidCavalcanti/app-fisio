@@ -118,7 +118,7 @@ Widget entrarButton() {
                   textStyle: const TextStyle(fontSize: 20),
                 ),
                 onPressed: () {},
-                child: const Text("Entrar"),
+                child: const Text("Entrar")
               ),
             ),
           ],
