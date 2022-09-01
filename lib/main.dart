@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_page/screens/registration_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/profileEdition_screen.dart';
+import 'screens/patient_register.dart';
 
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const LoginScreen(),
         '/entrar': (context) => const ProfileScreen(),
         '/registration': (context) => const RegistrationScreen(),
-        
+        '/cadastroPaciente': (context) => const CadastroPaciente(),
       },
     );
   }
