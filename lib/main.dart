@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/screens/registration_screen.dart';
-import 'screens/login_screen.dart';
-import 'screens/profileEdition_screen.dart';
-
+import 'package:login_page/screens/buscar_paciente_screen.dart';
+//import 'package:login_page/screens/registration_screen.dart';
+//import 'screens/login_screen.dart';
+//import 'screens/profileEdition_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Login UI',
       initialRoute: '/',
       routes: {
-        '/': (context) => const LoginScreen(),
-        '/entrar': (context) => const ProfileScreen(),
-        '/registration': (context) => const RegistrationScreen(),
-        
+        '/': (context) => const BuscarPaciente(),
+        // '/': (context) => const LoginScreen(),
+        // '/entrar': (context) => const ProfileScreen(),
+        // '/registration': (context) => const RegistrationScreen(),
       },
     );
   }
