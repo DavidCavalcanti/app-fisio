@@ -3,7 +3,7 @@ import 'package:login_page/screens/registration_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/profileEdition_screen.dart';
 import 'screens/patient_register.dart';
-
+import 'screens/initialProfile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,9 +18,10 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const LoginScreen(),
-        '/entrar': (context) => const ProfileScreen(),
+        '/entrar': (context) => const InitialProfile(),
         '/registration': (context) => const RegistrationScreen(),
-        '/cadastroPaciente': (context) => const CadastroPaciente(),
+        '/editar perfil': (context) => const ProfileScreen(),
+        '/cadastrar paciente': (context) => const CadastroPaciente(),
       },
     );
   }
