@@ -1,179 +1,231 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/src/foundation/key.dart';
+// import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/services.dart';
 
-class paciente_2 extends StatefulWidget {
-  const paciente_2({Key? key}) : super(key: key);   
-    @override
-  State<paciente_2> createState() => _paciente_2State();
+class paciente_1 extends StatefulWidget {
+  const paciente_1({Key? key}) : super(key: key);
+  @override
+  State<paciente_1> createState() => _paciente_1State();
 }
-  Widget pacintenome(){
+
+Widget dm() {
   return Center(
     child: Container(
-          width: 240.0,
-          height: 42.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24.0),
-            color: Color.fromARGB(255, 255, 255, 255),
+      width: 240.0,
+      height: 42.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24.0),
+        color: const Color.fromARGB(255, 255, 255, 255),
+      ),
+      // ignore: prefer_const_constructors
+      child: Center(
+        child: const Text(
+          'Diagnóstico Médico',
+          style: TextStyle(
+            fontFamily: 'Arial',
+            fontSize: 18,
+            color: Color.fromARGB(255, 0, 0, 0),
+            height: 1,
           ),
-          child: Center(
-            child: Text(
-              'Joao Aroldo Tigre',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 24,
-                color: Color.fromARGB(255, 0, 0, 0),
-                height: 1,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+          textAlign: TextAlign.center,
         ),
+      ),
+    ),
   );
 }
 
-  Widget CPFj(){
+Widget df() {
   return Center(
     child: Container(
-          width: 240.0,
-          height: 42.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24.0),
-            color: Color.fromARGB(255, 255, 255, 255),
+      width: 240.0,
+      height: 42.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24.0),
+        color: const Color.fromARGB(255, 255, 255, 255),
+      ),
+      // ignore: prefer_const_constructors
+      child: Center(
+        child: const Text(
+          'Diagnóstico Funcional',
+          style: TextStyle(
+            fontFamily: 'Arial',
+            fontSize: 18,
+            color: Color.fromARGB(255, 0, 0, 0),
+            height: 1,
           ),
-          child: Center(
-            child: Text(
-              '045.158.634-87',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 24,
-                color: Color.fromARGB(255, 0, 0, 0),
-                height: 1,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+          textAlign: TextAlign.center,
         ),
+      ),
+    ),
   );
 }
 
-  Widget EnderecoJ(){
+Widget dfo() {
   return Center(
     child: Container(
-          width: 240.0,
-          height: 42.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24.0),
-            color: Color.fromARGB(255, 255, 255, 255),
+      width: 240.0,
+      height: 42.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24.0),
+        color: const Color.fromARGB(255, 255, 255, 255),
+      ),
+      // ignore: prefer_const_constructors
+      child: Center(
+        child: const Text(
+          'Diagnóstico Fisoterapêutico',
+          style: TextStyle(
+            fontFamily: 'Arial',
+            fontSize: 18,
+            color: Color.fromARGB(255, 0, 0, 0),
+            height: 1,
           ),
-          child: Center(
-            child: Text(
-              'Rua Alagadiço',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 24,
-                color: Color.fromARGB(255, 0, 0, 0),
-                height: 1,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
+          textAlign: TextAlign.center,
         ),
+      ),
+    ),
+  );
+}
+
+Widget ec() {
+  return Center(
+    child: Container(
+      width: 240.0,
+      height: 42.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24.0),
+        color: const Color.fromARGB(255, 255, 255, 255),
+      ),
+      // ignore: prefer_const_constructors
+      child: Center(
+        child: const Text(
+          'Estrutura Corporal',
+          style: TextStyle(
+            fontFamily: 'Arial',
+            fontSize: 18,
+            color: Color.fromARGB(255, 0, 0, 0),
+            height: 1,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    ),
+  );
+}
+
+Widget ap() {
+  return Center(
+    child: Container(
+      width: 240.0,
+      height: 42.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24.0),
+        color: const Color.fromARGB(255, 255, 255, 255),
+      ),
+      // ignore: prefer_const_constructors
+      child: Center(
+        child: const Text(
+          'Atividade e Participação',
+          style: TextStyle(
+            fontFamily: 'Arial',
+            fontSize: 18,
+            color: Color.fromARGB(255, 0, 0, 0),
+            height: 1,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    ),
+  );
+}
+
+Widget dc() {
+  return Center(
+    child: Container(
+      width: 240.0,
+      height: 42.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24.0),
+        color: const Color.fromARGB(255, 255, 255, 255),
+      ),
+      // ignore: prefer_const_constructors
+      child: Center(
+        child: const Text(
+          'Descrição Conduta',
+          style: TextStyle(
+            fontFamily: 'Arial',
+            fontSize: 18,
+            color: Color.fromARGB(255, 0, 0, 0),
+            height: 1,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    ),
+  );
+}
+
+Widget botaoExportar(BuildContext context) {
+  return Center(
+    child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+      ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Stack(
+          children: <Widget>[
+            Positioned.fill(
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Color(0xff020122),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 155,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  padding: const EdgeInsets.all(16.0),
+                  primary: Colors.white,
+                  textStyle: const TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  //Navigator.pop(context);
+                  showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => AlertDialog(
+                      title: const Text('Exportar'),
+                      content: const Text('Selecione o meio de exportação: '),  
+                    actions: <Widget>[
+                      ElevatedButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('WhatsApp')),
+                      ElevatedButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('PDF'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('Email'),
+                      ),
+                    ]),
+                  );
+                },
+                child: const Text("Exportar"),
+              ),
+            ),
+          ],
+        ),
+      )
+    ]),
   );
 }
 
 
-  Widget TelefoneJ(){
-  return Center(
-    child: Container(
-          width: 240.0,
-          height: 42.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24.0),
-            color: Color.fromARGB(255, 255, 255, 255),
-          ),
-          child: Center(
-            child: Text(
-              '(80)98841-7893',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 24,
-                color: Color.fromARGB(255, 0, 0, 0),
-                height: 1,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ),
-  );
-}
- 
-   Widget ETelefoneJ(){
-  return Center(
-    child: Container(
-          width: 240.0,
-          height: 42.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24.0),
-            color: Color.fromARGB(255, 255, 255, 255),
-          ),
-          child: Center(
-            child: Text(
-              '(80)98704-2873',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 24,
-                color: Color.fromARGB(255, 0, 0, 0),
-                height: 1,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ),
-  );
-}
- 
-    Widget AlergiaJ(){
-  return Center(
-    child: Container(
-          width: 240.0,
-          height: 42.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24.0),
-            color: Color.fromARGB(255, 255, 255, 255),
-          ),
-          child: Center(
-            child: Text(
-              'Camarao,Frango, Dipirona',
-              style: TextStyle(
-                fontFamily: 'Arial',
-                fontSize: 24,
-                color: Color.fromARGB(255, 0, 0, 0),
-                height: 1,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            
-          ),
-        ),
-  );
-}
- 
-
-
-class _paciente_2State extends State<paciente_2> {
+class _paciente_1State extends State<paciente_1> {
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
-      
-      
       resizeToAvoidBottomInset: false,
-      
       body: AnnotatedRegion<SystemUiOverlayStyle>(
-      
         value: SystemUiOverlayStyle.light,
         child: GestureDetector(
           child: Stack(
@@ -190,7 +242,17 @@ class _paciente_2State extends State<paciente_2> {
                     children: <Widget>[
                       const SizedBox(height: 50),
                       const Text(
-                        "Joao Aroldo Tigre",
+                        "João Aroldo Tigre",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                        ),
+                      
+                      const SizedBox(height: 20),
+
+                      const Text(
+                        "CPF: 045.158.634-87",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
@@ -198,18 +260,19 @@ class _paciente_2State extends State<paciente_2> {
                       ),
 
                       const SizedBox(height: 40),
-                       const SizedBox(height: 50),
-                       pacintenome(),
+                      dm(),
                       const SizedBox(height: 20),
-                      CPFj(),
+                      df(),
                       const SizedBox(height: 20),
-                      EnderecoJ(),
+                      dfo(),
                       const SizedBox(height: 20),
-                    TelefoneJ(),
+                      ec(),
                       const SizedBox(height: 20),
-                      ETelefoneJ(),
+                      ap(),
                       const SizedBox(height: 20),
-                      AlergiaJ(),                      
+                      dc(),
+                      const SizedBox(height: 20),
+                      botaoExportar(context),
                     ],
                   ),
                 ),
@@ -217,9 +280,7 @@ class _paciente_2State extends State<paciente_2> {
             ],
           ),
         ),
-
       ),
     );
-
   }
-  }
+}
