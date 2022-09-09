@@ -8,131 +8,6 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
-/* WIDGETS */
-/*
-Widget buildEmail() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      const Text(
-        "Email",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      const SizedBox(height: 10),
-      Container(
-        alignment: Alignment.centerLeft,
-        width: 300,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black26,
-                blurRadius: 6,
-                offset: Offset(0, 2),
-              )
-            ]),
-        height: 60,
-        child: const TextField(
-          keyboardType: TextInputType.emailAddress,
-          style: TextStyle(color: Colors.black87),
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14),
-              prefixIcon: Icon(Icons.email, color: Colors.black87),
-              hintText: 'Email',
-              hintStyle: TextStyle(color: Colors.black38)),
-        ),
-      )
-    ],
-  );
-}
-*/
-/*
-Widget buildPassword() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      const Text(
-        "Senha",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      const SizedBox(height: 10),
-      Container(
-        alignment: Alignment.centerLeft,
-        width: 300,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black26,
-                blurRadius: 6,
-                offset: Offset(0, 2),
-              )
-            ]),
-        height: 60,
-        child: const TextField(
-          obscureText: true,
-          keyboardType: TextInputType.text,
-          style: TextStyle(color: Colors.black87),
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14),
-              prefixIcon: Icon(Icons.lock, color: Colors.black87),
-              hintText: 'Senha',
-              hintStyle: TextStyle(color: Colors.black38)),
-        ),
-      )
-    ],
-  );
-}
-*/
-/*
-Widget entrarButton(BuildContext context) {
-  return Center(
-    child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-      ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Stack(
-          children: <Widget>[
-            Positioned.fill(
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Color(0xff020122),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 155,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  padding: const EdgeInsets.all(16.0),
-                  primary: Colors.white,
-                  textStyle: const TextStyle(fontSize: 20),
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/entrar');
-                },
-                child: const Text("Entrar"),
-              ),
-            ),
-          ],
-        ),
-      )
-    ]),
-  );
-}
-*/
-
 Widget cadastrarButton(BuildContext context) {
   return Center(
     child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
@@ -375,12 +250,48 @@ class _LoginScreenState extends State<LoginScreen> {
                                               passwordController) {
                                             Navigator.pushNamed(
                                                 context, '/entrar');
+                                          } else {
+                                            showDialog<String>(
+                                                context: context,
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        AlertDialog(
+                                                          title: const Text(
+                                                              'Falha ao autenticar'),
+                                                          content: const Text(
+                                                              'Senha incorreta'),
+                                                          actions: <Widget>[
+                                                            TextButton(
+                                                              onPressed: () =>
+                                                                  Navigator.pop(
+                                                                      context,
+                                                                      'OK'),
+                                                              child: const Text(
+                                                                  'OK'),
+                                                            ),
+                                                          ],
+                                                        ));
                                           }
                                         }
                                       } else {
-                                        print("Email e senha errados!");
-                                        print(emailController);
-                                        print(passwordController);
+                                        showDialog<String>(
+                                            context: context,
+                                            builder: (BuildContext context) =>
+                                                AlertDialog(
+                                                  title: const Text(
+                                                      'Falha ao autenticar'),
+                                                  content: const Text(
+                                                      'Email e senha estão incorretos'),
+                                                  actions: <Widget>[
+                                                    TextButton(
+                                                      onPressed: () =>
+                                                          Navigator.pop(
+                                                              context, 'OK'),
+                                                      child: const Text('OK'),
+                                                    ),
+                                                  ],
+                                                ));
+                                        //const Dialog();
                                       }
                                     },
                                     child: const Text("Entrar"),
