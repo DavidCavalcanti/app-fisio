@@ -288,6 +288,15 @@ Widget confirmarButton(BuildContext context) {
                 ),
                 onPressed: () {
                   Navigator.pop(context);
+                  //print(nomes);
+
+                  //print(_nome);
+                  //print(_crefito);
+                  //print(_email);
+                  //print(_telefone);
+                  //print(_senha);
+                  //final nomesAdd = <int, String>{3: _nome as String};
+                  //nomes.addEntries(nomesAdd.entries);
                 },
                 child: const Text("Confirmar"),
               ),
