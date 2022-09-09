@@ -11,45 +11,34 @@ class InitialProfile extends StatefulWidget {
 // Icon Profile
 Widget buildProfile(BuildContext context) {
   return Center(
-    child: SizedBox(
-      height: 280,
-      child: Stack(
-        children: [
-          const Icon(Icons.account_circle, color: Colors.white, size: 150),
-          Positioned(
-              right: 05,
-              top: 25,
-              child: IconButton(
+    child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+      ClipRRect(
+        borderRadius: BorderRadius.circular(100),
+        child: Stack(
+          children: <Widget>[
+            SizedBox(
+              height: 200,
+              width: 200,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  //padding: const EdgeInsets.all(),
+                  textStyle: const TextStyle(fontSize: 10),
+                ),
+                child: Column(
+                  children: const [
+                    SizedBox(height: 25),
+                    Icon(Icons.account_circle, color: Colors.white, size: 150),
+                  ],
+                ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/editar perfil');
                 },
-                icon: const Icon(
-                  Icons.mode_edit_outline_rounded,
-                  size: 30,
-                ),
-              )),
-          const Text(
-            "Dr(a). Fulano(a)",
-            style: TextStyle(
-                height: 15,
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold),
-          ),
-
-          // Positioned(
-          //   top: 220,
-          //   child: Text(
-          //     "Dr(a). Fulano(a)",
-          //     style: TextStyle(
-          //         color: Colors.white,
-          //         fontSize: 20,
-          //         fontWeight: FontWeight.bold),
-          //   ),
-          // )
-        ],
-      ),
-    ),
+              ),
+            ),
+          ],
+        ),
+      )
+    ]),
   );
 }
 
@@ -174,6 +163,14 @@ class _InitialProfile extends State<InitialProfile> {
                       const SizedBox(height: 55),
                       buildProfile(context),
                       const SizedBox(height: 30),
+                      const Text(
+                        "Dr(a). Fulano(a)",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 80),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
